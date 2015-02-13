@@ -1,0 +1,1 @@
+This is a collection of Latex Templates that I use to make papers for school and other things. Hope you find use for them.
