@@ -1,0 +1,187 @@
+%------------------------------------------------
+% Review Template
+% Sam Dougherty
+% Last edited 12.2.2015
+%------------------------------------------------
+\documentclass[12pt,letterpaper]{article}
+
+
+%------------------------------------------------
+% 		Packages sam
+%------------------------------------------------
+\usepackage{geometry}  					% For paper options
+%\usepackage[parfill]{parskip}    			% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}					% For graphics
+\usepackage{setspace}					% For setting spacing \doublespace, \singlespace, etc
+\usepackage{fullpage}					% Makes margins equal
+\usepackage[section]{placeins}			% Controls placement of floats. delete [section] and use \FloatBarrier 
+\usepackage[round]{natbib}				% Citation style
+\usepackage{tikz}						% Pictures
+\usetikzlibrary{trees}						% Trees
+\usepackage{multicol}					% Multicollumn
+\usepackage[super]{nth}					% english ordinal system
+\usepackage[normalem]{ulem}				% Strikethrough stuff
+
+%------------------------------------------------
+%	Setup of things
+%-----------------------------------------------
+%\geometry{letterpaper}    					% Paper size
+\geometry{landscape}                			% Activate for for rotated page geometry
+%\parskip=5pt							 % Sets space between paragraphs
+\setlength{\textfloatsep}{					
+10pt plus 1.0pt minus 2.0pt}				
+
+
+%------------------------------------------------
+%	New styles
+%------------------------------------------------
+
+
+\makeatletter
+\renewcommand{\@listI}{\itemsep=-3pt} 		% Reduce the space between items in the itemize and enumerate 											environments and the bibliography
+
+\renewcommand{\maketitle}{				% New Title Style
+\begin{flushleft} 						
+{\LARGE\@title} 
+
+\vspace{15pt} 							
+
+{\normalsize\@author} 					
+\\\@date 						
+
+\vspace{10pt} 					
+\end{flushleft}
+}
+
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@} 		% New section style
+                                  {-1ex \@plus -1ex \@minus -.2ex}
+                                  {1.3ex \@plus.2ex}
+                                  {\normalfont\normalsize\bfseries}}
+\makeatother
+
+\makeatletter
+\renewcommand\subsection{\@startsection{subsection}{1}{\z@} 		% New subsection style
+                                  {-1ex \@plus -1ex \@minus -.2ex}
+                                  {1.3ex \@plus.2ex}
+                                  {\normalfont\normalsize}}
+\makeatother
+
+
+%------------------------------------------------
+%	Title
+%------------------------------------------------
+
+\title{Whitty title}
+\author{Sam Dougherty}
+\date{\today}
+
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+%	This is the beginning
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+\begin{flushleft}
+
+\textbf{Review Doc}
+
+\vspace{1cm}
+
+%------------------------------------------------
+%	Book 
+%------------------------------------------------
+
+	
+\section{Book}		
+\begin{centering}
+
+\large \textsc  {Vegitation \\ Of\\Western Wildlands} \\ \vspace{.5cm}
+
+\scriptsize \nth{2}  Edition (\emph{University of Nebraska Press}) \\
+ James Stubbendieck, Stephan L. Hatch,\\ and  Neal M. Bryan\\
+ 
+ \end {centering}
+  \normalsize
+  
+%------------------------------------------------
+%	Readings 
+%------------------------------------------------
+
+ 
+\section{Readings}
+
+\subsection{topic}
+		\begin{enumerate}
+			\item Pages
+				\begin{enumerate}
+					\item \emph{reading1} pg 
+					\item \emph{reading2} pg
+					\item \emph{reading3} pg
+				\end{enumerate} 
+			\item Pages
+				\begin{enumerate}
+					\item \emph{reading1} pg 
+					\item \emph{reading2} pg
+					\item \emph{reading3} pg 				
+					\end{enumerate}
+			\item etc
+		\end{enumerate}			
+%------------------------------------------------
+%	Concepts 
+%------------------------------------------------
+\section{Key Concepts}
+\subsection{topic}
+	\begin{description}
+		\item{\textsc{Title of topic1}}  short blurb about the topic.
+		\item{\textsc{Title of topic2}}  short blurb about the topic.
+		\item{\textsc{Title of topic3}}  short blurb about the topic.
+	\end{description}
+	
+For more information see:
+	\begin{itemize}
+		\item \textsc{Other Resources} \\ yup
+		\item \textsc{Other Resources} \\ yup
+		\item Vocab
+		\begin{itemize}
+			\item Vocab1--def
+			\item \emph {Vocab2}--def
+			\item Vocab3--def
+		\end{itemize}
+	\end{itemize}
+%------------------------------------------------
+%	Issues
+%------------------------------------------------
+
+\section{Issues}
+
+\begin{itemize}
+	\item topic1 \emph{pgs}
+		\begin{enumerate}
+			\item Types of things
+				\begin{itemize}
+					\item thing1
+					\item thing2
+					\item thing3
+				\end{itemize}
+			\item topic2
+			\item topic3
+		\end{enumerate}
+\end{itemize}
+
+\end{flushleft}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+

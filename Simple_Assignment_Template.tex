@@ -1,0 +1,123 @@
+%------------------------------------------------
+% Multipurpose Article template
+% Sam Dougherty
+% Last edited 12.2.2015
+%------------------------------------------------
+\documentclass[12pt,letterpaper]{article}
+
+%------------------------------------------------
+% 		Packages sam
+%------------------------------------------------
+\usepackage{geometry}  					% For paper options
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}					% For graphics
+\usepackage{setspace}					% For setting spacing \doublespace, \singlespace, etc
+\usepackage{fullpage}					% Makes margins equal
+\usepackage[section]{placeins}			% Controls placement of floats. delete [section] and use \FloatBarrier 
+\usepackage[round]{natbib}				% Citation style
+\usepackage{tikz}						% Pictures
+\usetikzlibrary{trees}					% Trees
+\usepackage{multicol}					% Multicollumn
+\usepackage[super]{nth}					% english ordinal system
+\usepackage[normalem]{ulem}				% Strikethrough stuff
+\usepackage[ddmmyyyy]{datetime}			% Change date time format
+\usepackage{hyperref}					% For URLS and hypertext links
+
+		
+%------------------------------------------------
+%	Setup of things
+%-----------------------------------------------
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\parskip=5pt							 	% Sets space between paragraphs
+\setlength{\textfloatsep}{					
+10pt plus 1.0pt minus 2.0pt}			
+%\geometry{left=1in}						%messing with margins
+%\geometry{right=1in}						%messing with margins
+%\geometry{top=1in}							%messing with margins
+
+
+%------------------------------------------------
+%	New styles
+%------------------------------------------------
+% Reduce the space between items in the itemize and enumerate environments and the bibliography
+\makeatletter
+\renewcommand{\@listI}{\itemsep=-3pt} 		
+
+% New Title Style flush left with name then stuff
+\renewcommand{\maketitle}{				
+\begin{flushleft} 	
+
+{\normalsize\@author\\}
+{\normalsize\@date}\\
+
+\vspace{5pt}	
+
+{\normalsize\bfseries\@title} 
+
+\vspace{10pt} 					
+
+\end{flushleft}
+}
+
+
+% New section style
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@} 		
+                               	{-1ex \@plus -1ex \@minus -.2ex}
+                                  {1.3ex \@plus.2ex}
+                                  {\normalfont\Large\bfseries}}
+\makeatother
+
+% New subsection style
+\makeatletter
+\renewcommand\subsection{\@startsection{subsection}{1}{\z@} 		
+                                  {-1ex \@plus -1ex \@minus -.2ex}
+                                  {1.3ex \@plus.2ex}
+                                  {\normalfont\large\bfseries}}
+\makeatother
+
+% New subsubsection style
+\makeatletter
+\renewcommand\subsubsection{\@startsection{subsection}{1}{\z@} 		
+                                  {-1ex \@plus -1ex \@minus -.2ex}
+                                  {1.3ex \@plus.2ex}
+                                  {\normalfont\normalsize}}
+\makeatother
+
+% roman numerals
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}			
+\makeatother
+
+% alpha subsection
+%\renewcommand{\thesubsection}{\thesection.\alph{subsection}}	
+				
+% Date seporator value
+\renewcommand{\dateseparator}{-}										
+
+
+%------------------------------------------------
+%	Title
+%------------------------------------------------
+
+\title{title here}			%Title
+\author{Sam Dougherty\\		%Name
+class here}					%Class
+\date{\today\\\currenttime} 				%Date
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+%	This is the beginning
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{document}
+%\begin{multicols}{2}				%if you want multi columns
+
+\maketitle
+
+%------------------------------------------------
+%	MORE STUFF HERE!!!!
+%------------------------------------------------
+%\end{multicols}
+\end{document}
+
+
